@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recursive Image</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at center, #0f0f0f 0%, #000 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .frame {
+      width: 600px;
+      height: 600px;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      border-radius: 32px;
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+      animation: pulse 6s infinite alternate;
+      overflow: hidden;
+    }
+
+    .frame .frame {
+      width: 70%;
+      height: 70%;
+      position: absolute;
+      top: 15%;
+      left: 15%;
+      border-radius: 32px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+      animation-delay: 0.2s;
+    }
+
+    .frame .frame .frame {
+      width: 70%;
+      height: 70%;
+      top: 15%;
+      left: 15%;
+      border-radius: 32px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      animation-delay: 0.4s;
+    }
+
+    .frame .frame .frame .frame {
+      width: 70%;
+      height: 70%;
+      top: 15%;
+      left: 15%;
+      border-radius: 32px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+      animation-delay: 0.6s;
+    }
+
+    .frame .frame .frame .frame .frame {
+      width: 70%;
+      height: 70%;
+      top: 15%;
+      left: 15%;
+      border-radius: 32px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+      animation-delay: 0.8s;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+      }
+      100% {
+        transform: scale(1.05);
+        box-shadow: 0 0 80px rgba(0, 255, 255, 0.6);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="frame">
+      <div class="frame">
+        <div class="frame">
+          <div class="frame">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
